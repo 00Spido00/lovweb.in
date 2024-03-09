@@ -70,27 +70,21 @@
     <h4>  I AM SPIDER</h4>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+           document.addEventListener('DOMContentLoaded', function() {
             var yesButton = document.getElementById('yes');
             var noButton = document.getElementById('no');
-            var videoPlayer = document.getElementById('videoPlayer');
 
-            var yesVideoUrl = 'https://www.youtube.com/embed/f2XuoqdTTmU?si=12NjxTGf3cS6cAne'; // Replace 'f2XuoqdTTmU' with your 'yes' YouTube video ID
-            var noVideoUrl = 'https://www.youtube.com/embed/NGBtM026ty4?si=BBgc_3pnUEsF8rOH'; // Replace 'NGBtM026ty4' with your 'no' YouTube video ID
-
-            // Function to play video
-            function playVideo(videoUrl) {
-                videoPlayer.src = videoUrl;
-            }
+            var yesVideoUrl = 'https://www.youtube.com/watch?v=f2XuoqdTTmU'; // Replace with your 'yes' YouTube video URL
+            var noVideoUrl = 'https://www.youtube.com/watch?v=NGBtM026ty4'; // Replace with your 'no' YouTube video URL
 
             // Event listener for 'Yes' button
             yesButton.addEventListener('click', function() {
-                playVideo(yesVideoUrl);
+                window.open(yesVideoUrl, '_blank'); // Open the 'yes' YouTube video in a new tab
             });
 
             // Event listener for 'No' button
             noButton.addEventListener('click', function() {
-                playVideo(noVideoUrl);
+                window.open(noVideoUrl, '_blank'); // Open the 'no' YouTube video in a new tab
             });
         });
     </script>
